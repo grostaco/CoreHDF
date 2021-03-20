@@ -4,7 +4,7 @@ import functools
 
 
 def export_model(train_path, test_path, image_size, validation_split=0.2, labels='inferred', seed=42,
-                 batch_size=32, epochs=10, export_path='thermo_model'):
+                 batch_size=32, epochs=10, export_path='thermal_model'):
     # TODO: maybe artificially increase the dataset size by image transformations
     train_ds = tf.keras.preprocessing.image_dataset_from_directory(
         train_path,
