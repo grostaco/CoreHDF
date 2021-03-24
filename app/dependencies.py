@@ -6,11 +6,11 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
-
 from sqlalchemy.orm import Session
-from .sql_app.schemas import UserBase, User
-from .sql_app.database import SessionLocal
+
 from .sql_app.crud import get_user_by_username
+from .sql_app.database import SessionLocal
+from .sql_app.schemas import User
 
 # TODO: remove this
 SECRET_KEY = "0a958bb8cade83e35d3d5a02f04ff076a65c16a87dbd478c57a60f763a07255c"
