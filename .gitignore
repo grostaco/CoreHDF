@@ -1,2 +1,2 @@
-*.ipynb
 .idea
+*.db
