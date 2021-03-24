@@ -33,6 +33,7 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id: str
+    hashed_password: str
     is_active: bool = True
 
     class Config:
