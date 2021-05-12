@@ -1,0 +1,7 @@
+.idea
+*.db
+/venv/
+image_logs/*
+*.pt
+log.txt
+*.ipynb
