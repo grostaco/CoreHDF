@@ -1,5 +1,10 @@
-from CNN import predict
+import uvicorn
+from fastapi import FastAPI
+from app.routers import token, query, users
 
-c = predict.CoreHDF()
+app = FastAPI()
+app.include_router(token.router)
+app.include_router(query.router)
+app.include_router(users.router)
 
-r = c.record('https://cdn.discordapp.com/attachments/781628981484060712/841695611728166941/image0.png')
+uvicorn.run(app)
