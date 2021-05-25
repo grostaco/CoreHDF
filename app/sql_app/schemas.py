@@ -34,6 +34,7 @@ class User(UserBase):
     id: str
     hashed_password: str
     is_active: bool = True
+    permissions: int = 0
 
     class Config:
         orm_mode = True

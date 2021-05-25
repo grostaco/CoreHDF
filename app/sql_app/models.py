@@ -12,5 +12,6 @@ class User(Base):
     email = Column(String, unique=True)
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
+    permissions = Column(Integer, default=True)
 
 
