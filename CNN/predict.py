@@ -48,5 +48,3 @@ class CoreHDF:
             self.logger.info(f'Detected {persons_count} person{"s" * (persons_count > 1)}')
             self.logger.debug(f'Saving image')
             results.save(img_dst)
-
-

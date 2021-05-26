@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-
+from typing import List
 """
 class ItemBase(BaseModel):
     title: str
@@ -38,5 +38,15 @@ class User(UserBase):
 
     class Config:
         orm_mode = True
+
+
+class Log(BaseModel):
+    level: str
+    datetime: str
+    message: str
+
+
+class LogResponse(BaseModel):
+    logs: List[Log]
 
 
